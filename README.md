@@ -73,7 +73,11 @@
 -  `./index.js -a'your note'`
   -Returns object
 
-
+#### How do I install the app or library
+- npm init -y
+- npm i -D jest
+- npm i eslint
+- npm i minimist
 
 #### Tests
 
