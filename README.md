@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/lab-00/pull/1)
+- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/lab-01-note/pull/1)
 
 #### Documintation
 
