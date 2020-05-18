@@ -82,4 +82,4 @@
 
 #### UML
 
-![UML Digram](/assest/uml-classes.jpeg)
+![UML Digram](/assest/uml-Classes.jpeg)
