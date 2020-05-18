@@ -25,5 +25,8 @@
     "eslint": "^7.0.0",
     "minimist": "^1.2.5",
     "notes": "0.0.4"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   }
 }
