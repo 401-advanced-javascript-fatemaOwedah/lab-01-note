@@ -4,32 +4,21 @@ require('dotenv').config();
 const Input = require('./lib/input.js');
 const Notes = require('./lib/notes.js');
 let parsedInput = new Input();
-new Notes(parsedInput.note);
+let notes = new Notes(parsedInput);
+
 
 
 
 
 const mongoose = require('mongoose');
-const NoteSchema = require('./lib/model/notes-schema');
+require('./lib/model/notes-schema');
 const MONGO_DB = process.env.MONGOOSE_URI;
 
-mongoose.connect(MONGO_DB, {userNewUrlParse: true, useUnifiedTopology: true} );
+mongoose.connect(MONGO_DB, {userNewUrlParse: true, useUnifiedTopology: true, useCreateIndex: true} );
 
-const doDataStuff = async()=> {
 
-  let nootte = {
-    payload: 'Apple',
-    category: 'dvdvdv',
-  };
-  let notenew = new NoteSchema(nootte); 
-
-  await notenew.save();
-
-  let uniqueNote = await NoteSchema.findById(notenew.id);
-  let notesColl = await NoteSchema.find({category: 'Apple'});
+notes.save(parsedInput.action)
+  .then(()=>notes.list(parsedInput.action))
+  .then(mongoose.disconnect);
   
-    
-  let allNotes = await NoteSchema.find({});
-};
 
-doDataStuff();
