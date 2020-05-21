@@ -19,6 +19,7 @@ mongoose.connect(MONGO_DB, {userNewUrlParse: true, useUnifiedTopology: true, use
 
 notes.save(parsedInput.action)
   .then(()=>notes.list(parsedInput.action))
+  .then(()=>notes.delete(parsedInput.action))
   .then(mongoose.disconnect);
   
 
