@@ -9,8 +9,8 @@ describe('Input Module', ()=>{
   });
   it ('The user input -a , --add',()=> {
     let notee = new Input();
-    expect(notee.actions('a', 'there is the note','category','school')).toHaveReturned({action: 'add', playload: 'there is the note', category:'school'});
-    expect(notee.actions('add', 'there is the note','category','school')).toHaveReturned({action: 'add', playload: 'there is the note', category:'school'});
+    expect(notee.actions('a', 'there is the note','category','school')).toEqual({action: 'add', playload: 'there is the note', category:'school'});
+    expect(notee.actions('add', 'there is the note','category','school')).toEqual({action: 'add', playload: 'there is the note', category:'school'});
   });
   it ('The user not write a note',()=> {
     let notee = new Input();
@@ -23,10 +23,10 @@ describe('Input Module', ()=>{
   }); 
   it ('The user input --list',()=> {
     let notee = new Input();
-    expect(notee.actions('list', 'school')).toHaveReturned({action: 'list', category:'school'});
+    expect(notee.actions('list', 'school')).toEqual({action: 'list', category:'school'});
   });
   it ('The user input --delete',()=> {
     let notee = new Input();
-    expect(notee.actions('delete', 'sfs2sff2')).toHaveReturned({action: 'delete', id:'sfs2sff2'});
+    expect(notee.actions('delete', 'sfs2sff2')).toEqual({action: 'delete', id:'sfs2sff2'});
   });
 });
