@@ -26,6 +26,11 @@ describe('Notes Module', ()=>{
     let obj = {action: 'delete', id:'5ec69431662d0810c36891f3'};
     resultt.delete(obj)
       .then(()=>{expect(console.log).toHaveBeenCalled();});
-    
+  });
+  it ('give me update',()=> {
+    let resultt = new Result();
+    let obj = {action: 'update', id:'5ec69431662d0810c36891f3', playload:'the note after update'};
+    resultt.update(obj)
+      .then(()=>{expect(console.log).toHaveBeenCalled();});
   });
 });

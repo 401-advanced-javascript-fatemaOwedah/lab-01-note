@@ -29,4 +29,8 @@ describe('Input Module', ()=>{
     let notee = new Input();
     expect(notee.actions('delete', 'sfs2sff2')).toEqual({action: 'delete', id:'sfs2sff2'});
   });
+  it ('The user input --update',()=> {
+    let notee = new Input();
+    expect(notee.actions('update', 'sfs2sff2' , 'new' , 'the new note after update')).toEqual({action: 'update', id:'sfs2sff2', playload:'the new note after update'});
+  });
 });
