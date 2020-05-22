@@ -95,12 +95,13 @@
 ### Links and Resources
 
 - [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/lab-01-note/pull/6)
+- [Git Hub action](https://github.com/401-advanced-javascript-fatemaOwedah/lab-01-note/actions)
 
 
 #### Documintation
 
 ### Modules
-#### `note.js`
+#### `notes.js`
 #### `input.js`
 
 ### Setup
@@ -133,4 +134,4 @@
 
 #### UML
 
-![UML Digram](/assest/uml-Classes.jpeg)
+![UML Digram](/assest/lab3.jpeg)
