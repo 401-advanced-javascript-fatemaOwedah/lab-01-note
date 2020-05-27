@@ -22,8 +22,11 @@
   },
   "homepage": "https://github.com/401-advanced-javascript-fatemaOwedah/lab-01-note#readme",
   "dependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
+    "dotenv": "^8.2.0",
     "eslint": "^7.0.0",
     "minimist": "^1.2.5",
+    "mongoose": "^5.9.15",
     "notes": "0.0.4"
   },
   "devDependencies": {

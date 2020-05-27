@@ -9,8 +9,8 @@ describe('Input Module', ()=>{
   });
   it ('The user input -a , --add',()=> {
     let notee = new Input();
-    expect(notee.actions('a')).toEqual('add');
-    expect(notee.actions('add')).toEqual('add');
+    expect(notee.actions('a', 'there is the note','category','school')).toEqual({action: 'add', playload: 'there is the note', category:'school'});
+    expect(notee.actions('add', 'there is the note','category','school')).toEqual({action: 'add', playload: 'there is the note', category:'school'});
   });
   it ('The user not write a note',()=> {
     let notee = new Input();
@@ -21,4 +21,12 @@ describe('Input Module', ()=>{
     let notee = new Input();
     expect(notee.valid('val')).toEqual('val');
   }); 
+  it ('The user input --list',()=> {
+    let notee = new Input();
+    expect(notee.actions('list', 'school')).toEqual({action: 'list', category:'school'});
+  });
+  it ('The user input --delete',()=> {
+    let notee = new Input();
+    expect(notee.actions('delete', 'sfs2sff2')).toEqual({action: 'delete', id:'sfs2sff2'});
+  });
 });
