@@ -23,7 +23,7 @@
   "homepage": "https://github.com/401-advanced-javascript-fatemaOwedah/lab-01-note#readme",
   "dependencies": {
     "eslint": "^7.0.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "notes": "0.0.4"
   },
   "devDependencies": {
